@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Order.Domain.AggregateModels.OrderModels
+namespace OrderDomain.AggregateModels.OrderModels
 {
     public class Order : BaseEntity, IAggregateRoot
     {
@@ -17,7 +17,6 @@ namespace Order.Domain.AggregateModels.OrderModels
 
         public string Description { get; private set; }
 
-        public int BuyerId { get; private set; }
 
         public string UserName { get; private set; }
 
@@ -28,7 +27,7 @@ namespace Order.Domain.AggregateModels.OrderModels
         public ICollection<OrderItem> OrderItems { get; private set; }
 
 
-        public Order(DateTime orderDate, string description,int buyerId, string userName, string orderStatus, Address address, ICollection<OrderItem> orderItems)
+        public Order(DateTime orderDate, string description, string userName, string orderStatus, Address address, ICollection<OrderItem> orderItems)
         {
             if (orderDate < DateTime.Now)
                 throw new Exception("Orderdata must be greater than now");
@@ -38,12 +37,11 @@ namespace Order.Domain.AggregateModels.OrderModels
 
             OrderDate = orderDate;
             Description = description ?? throw new ArgumentNullException(nameof(description));
-            BuyerId = buyerId;
             UserName = userName;
             OrderStatus = orderStatus ?? throw new ArgumentNullException(nameof(orderStatus));
             Address = address ?? throw new ArgumentNullException(nameof(address));
             OrderItems = orderItems ?? throw new ArgumentNullException(nameof(orderItems));
-            AddDomainEvents(new OrderStartedDomainEvent("","",this));
+            AddDomainEvents(new OrderStartedDomainEvent(userName,this));
         }
 
         public void AddOrderItem(int quantity, decimal price, int productId)

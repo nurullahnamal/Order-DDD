@@ -5,13 +5,13 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5F0D2712-7AA6-4EA5-B8F1-784650934D97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderDomain", "OrderDomain\OrderDomain.csproj", "{D8F97EAB-E9D6-4236-A023-6C07BFCD73FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderDomain", "OrderDomain\OrderDomain.csproj", "{D8F97EAB-E9D6-4236-A023-6C07BFCD73FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Application", "Order.Application\Order.Application.csproj", "{A535FF72-382F-45E9-9250-25AD79283AC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Application", "Order.Application\Order.Application.csproj", "{A535FF72-382F-45E9-9250-25AD79283AC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Infrastructure", "Order.Infrastructure\Order.Infrastructure.csproj", "{4CDE32A0-A518-4335-B3D2-465A5C928ED7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Infrastructure", "Order.Infrastructure\Order.Infrastructure.csproj", "{4CDE32A0-A518-4335-B3D2-465A5C928ED7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.WebApi", "Order.WebApi\Order.WebApi.csproj", "{E1596A57-AFB9-420C-897C-8666F331ADFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.WebApi", "Order.WebApi\Order.WebApi.csproj", "{E1596A57-AFB9-420C-897C-8666F331ADFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

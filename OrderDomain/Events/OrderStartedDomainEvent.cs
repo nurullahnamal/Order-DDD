@@ -11,15 +11,14 @@ namespace OrderDomain.Events
     {
        
 
-        public string BuyerFirstName { get; set; }
-        public string BuyerLastName { get; set; }
+        public string UserName { get; set; }
+     
 
-        public Order.Domain.AggregateModels.OrderModels.Order Order{ get; set; }
+        public OrderDomain.AggregateModels.OrderModels.Order Order{ get; set; }
 
-        public OrderStartedDomainEvent(string buyerFirstName, string buyerLastName, Order.Domain.AggregateModels.OrderModels.Order order)
+        public OrderStartedDomainEvent(string userName, OrderDomain.AggregateModels.OrderModels.Order order)
         {
-            BuyerFirstName = buyerFirstName;
-            BuyerLastName = buyerLastName;
+            UserName = userName;
             Order = order;
         }
     }
